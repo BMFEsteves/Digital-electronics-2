@@ -9,12 +9,13 @@
  * Description: Blink a LED with delay function.
  * TODO: Verify functionality of LED blinker.
  * NOTE: Macro _BV converts a bit number into a byte value (see AVR Libc
- * Reference Manual).
+ * Reference Manual). _
  */
 
 /* Includes ----------------------------------------------------------*/
 #include <avr/io.h>
 #include <util/delay.h>
+#include <gpio.h>
 
 /* Typedef -----------------------------------------------------------*/
 /* Define ------------------------------------------------------------*/
@@ -38,7 +39,7 @@ int main(void)
     DDRB |= _BV(LED_GREEN);         /* DDRB = DDRB or (0010 0000) */
     DDRB |= _BV(LED_YELLOW);         /* DDRB = DDRB or (0010 0000) */
     DDRD |= _BV(PUSHBUT);
-    PORTD |= _BV(PUSHBUT)
+    PORTD |= _BV
 
     /* Turn LED off */
     PORTB &= ~_BV(LED_GREEN);       /* PORTB = PORTB and (0010 0000) */
@@ -48,11 +49,9 @@ int main(void)
     for (;;)
     {
         /* Invert LED and delay */
-        if(bit_is_clear(PIND,PUSHBUT)){
         PORTB ^= _BV(LED_GREEN);
         PORTB ^= _BV(LED_YELLOW);    /* PORTB = PORTB xor (0010 0000) */
         _delay_ms(BLINK_DELAY);     /* Wait for several milisecs */
-        }
     }
 
     return (0);
