@@ -38,6 +38,7 @@ int main(void)
     DDRB |= _BV(LED_GREEN);         /* DDRB = DDRB or (0010 0000) */
     DDRB |= _BV(LED_YELLOW);         /* DDRB = DDRB or (0010 0000) */
     DDRD |= _BV(PUSHBUT);
+    PORTD |= _BV
 
     /* Turn LED off */
     PORTB &= ~_BV(LED_GREEN);       /* PORTB = PORTB and (0010 0000) */

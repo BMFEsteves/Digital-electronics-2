@@ -28,7 +28,7 @@ TARGET = DEMO
 # Processor frequency
 F_CPU = 16000000
 # AVR 8-bit toolchain
-#TOOLCHAIN_PATH = /opt/avr8-gnu-toolchain-linux_x86_64
+#TOOLCHAIN_PATH = /opt/avr8-gnu-toolchain-linux_x86_64$
 TOOLCHAIN_PATH = c:\APPZ\AVR\avr8-gnu-toolchain-win32_x86
 # Port of programmer
 #USBPORT = /dev/ttyUSB0
