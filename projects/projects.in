@@ -14,8 +14,6 @@ PREFIX = /opt/avr8-gnu-toolchain-linux_x86_64
 
 
 
-
-
 ##
 ## You should not have to change anything below here
 ##
